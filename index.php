@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje zamówienia — Jaguar</title>
+    <title>Jaguar — Sklep</title>
     <link rel="shortcut icon" href="img/logo-white.png" type="image/x-icon">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="pages.css">
@@ -15,7 +15,7 @@
     </header>
     <nav>
         <a href="index.php">Strona główna</a>
-        <form action="index.php" method="get">
+        <form id="filter-form">
             <select name="type" id="type-filter"><option value="all">Wszystkie</option></select>
             <input type="text" name="search" id="search-filter" placeholder="Szukaj...">
             <input type="submit" value="🔍">
@@ -27,14 +27,10 @@
     </nav>
 
     <div id="page-message" class="message hidden"></div>
-
-    <div style="padding: 20px 24px 0;">
-        <h2 style="font-size:1.4rem;">Moje zamówienia</h2>
-    </div>
-
-    <div id="orders-list" class="orders-list"></div>
+    <div id="loading" class="loading hidden">Ładowanie produktów</div>
+    <main id="products"></main>
 
     <script src="js/config.js"></script>
-    <script type="module" src="js/my-orders.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>

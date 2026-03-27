@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie — Jaguar</title>
+    <title>Rejestracja — Jaguar</title>
     <link rel="shortcut icon" href="img/logo-white.png" type="image/x-icon">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="pages.css">
@@ -17,24 +17,27 @@
     <main>
         <div class="login-wrap">
             <div class="login-card">
-                <h2>Zaloguj się</h2>
-                <p>Nowy użytkownik? <a href="register.php">Utwórz konto</a></p>
+                <h2>Utwórz konto</h2>
+                <p>Masz już konto? <a href="login.php">Zaloguj się</a></p>
                 <hr>
                 <div id="page-message" class="message hidden"></div>
-                <form id="login-form">
+                <form id="register-form">
                     <label for="login">Login</label>
-                    <input type="text" name="login" id="login" placeholder="Twój login" required autocomplete="username">
+                    <input type="text" name="login" id="login" placeholder="Min. 3 znaki" required autocomplete="username">
 
                     <label for="password">Hasło</label>
-                    <input type="password" name="password" id="password" placeholder="Twoje hasło" required autocomplete="current-password">
+                    <input type="password" name="password" id="password" placeholder="Min. 6 znaków" required autocomplete="new-password">
 
-                    <button type="submit">Zaloguj się</button>
+                    <label for="confirm">Potwierdź hasło</label>
+                    <input type="password" name="confirm" id="confirm" placeholder="Powtórz hasło" required autocomplete="new-password">
+
+                    <button type="submit">Utwórz konto</button>
                 </form>
             </div>
         </div>
     </main>
 
     <script src="js/config.js"></script>
-    <script type="module" src="js/login.js"></script>
+    <script type="module" src="js/register.js"></script>
 </body>
 </html>
